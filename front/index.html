@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Front</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <br/>
+            <form id="aluno-form">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Nome</label>
+                        <input required type="text" class="form-control" placeholder="Aluno" id="name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Idade</label>
+                        <input required type="text" class="form-control" placeholder="18" id="years">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Email</label>
+                    <input required type="email" class="form-control" id="email" placeholder="aluno@crescere.me">
+                </div>
+                <button type="submit" class="btn btn-outline-primary btn-block">Registrar</button>
+            </form>
+            <hr/>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Idade</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo-da-tabela">
+                    
+                </tbody>
+            </table>
+            <div class="modal fade" id="editarAluno" tabindex="-1" role="dialog" aria-labelledby="editarAlunoLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <form id="edit-aluno-form">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editarAlunoLabel">Editar usuário</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Nome</label>
+                                        <input required type="text" class="form-control" placeholder="Aluno" id="edit-name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Idade</label>
+                                        <input required type="text" class="form-control" placeholder="18" id="edit-years">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAddress">Email</label>
+                                    <input required type="email" class="form-control" id="edit-email" placeholder="aluno@crescere.me">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
