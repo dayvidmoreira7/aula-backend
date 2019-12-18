@@ -1,10 +1,13 @@
+// CONFIGURANDO A API
 const express = require('express');
 const cors = require('cors');
 
+// SETTANDO CORS E TIPO DE DADOS QUE A API VAI UTILIZAR
 const app = express();
 app.use(cors());
 app.use(express.json());
 
+// CONECTANDO A API AO BANCO MONGODB
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://heroku_glfs74dt:89buu6coppna52ngcv9u22o5lq@ds143143.mlab.com:43143/heroku_glfs74dt', {
     useNewUrlParser: true, 
@@ -14,6 +17,8 @@ mongoose.connect('mongodb://heroku_glfs74dt:89buu6coppna52ngcv9u22o5lq@ds143143.
 })
 
 // GET -> REQUISITAR ALGUMA INFORMAÇÃO | PUT -> ALTERAR ALGUMA INFORMAÇÃO | POST -> CRIAR ALGUMA INFORMAÇÃO | DELETE -> DELETAR ALGUMA INFORMAÇÃO
+
+// IMPORTANDO MODELO DE DADOS PARA TRABALHAR NO MONGODB
 const Aluno = require('./models/alunos');
 
 app.get('/', (req, res) => { 
